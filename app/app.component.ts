@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Hero } from './Hero';
+
 @Component({
   selector:'my-app',
   template:`
@@ -63,4 +64,7 @@ import { Hero } from './Hero';
 
 export class AppComponent{
   title = 'Tour of Heroes';
+  constructor() {
+
+  }
 }

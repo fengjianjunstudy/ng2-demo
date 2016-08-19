@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { Hero } from './Hero';
 import { HeroService } from './hero.service';
+import * as D3 from 'd3';
 @Component({
   selector:'my-heroes',
   template:`
