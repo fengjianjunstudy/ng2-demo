@@ -9,6 +9,7 @@ import { Hero } from './Hero';
     <h2>My Heroes</h2>
     <a routerLink="/dashboard">Dashboard</a>
     <a routerLink="/heroes">Heroes</a>
+    <a routerLink="/pie">Pie</a>
     <router-outlet></router-outlet>
     `,
   styles: [`

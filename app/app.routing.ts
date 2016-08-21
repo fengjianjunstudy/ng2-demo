@@ -5,7 +5,7 @@ import { Routes , RouterModule } from '@angular/router';
 import { HeroesComponent } from './heroes.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroDetailComponent } from './hero-detail.component'
-const appRoutes:Routes =<Routes>[
+const appRoutes:Routes = [
   {
     path:'',
     redirectTo:'/dashboard',
@@ -24,6 +24,10 @@ const appRoutes:Routes =<Routes>[
     path: 'detail/:id',
     component: HeroDetailComponent,
 
+  },
+  {
+    path: 'pie',
+    loadChildren: 'app/pie/pie.module'
   }
 ]
 export const routing = RouterModule.forRoot(appRoutes);

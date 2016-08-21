@@ -12,12 +12,14 @@ import { HeroesComponent } from './heroes.component';
 import { DashboardComponent } from './dashboard.component';
 import { HeroSearchComponent } from './hero-search.component';
 
+/* Feature Modules */
+import { PieModule } from './pie/pie.module'
+
 import { HeroService } from './hero.service';
 import { routing } from './app.routing'
 
-
 @NgModule(<NgModuleMetadataType>{
-  imports: [BrowserModule,FormsModule,routing,HttpModule],
+  imports: [BrowserModule,FormsModule,routing,HttpModule,PieModule],
   declarations: [AppComponent,HeroDetailComponent,HeroesComponent,DashboardComponent,HeroSearchComponent],
   bootstrap: [AppComponent],
   providers:[

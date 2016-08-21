@@ -1,0 +1,29 @@
+<div class="col-lg-3">
+ <form class="form-horizontal">
+  <div class="form-group">
+   <label for="r1" class="col-sm-5 control-label">R1</label>
+   <div class="col-sm-7">
+    <input type="text" name="r1" #r1 class="form-control" (blur)="changeR1(r1.value)" [ngModel] ="opts.r1" id="r1" [attr.placeholder]="opts.r1">
+   </div>
+  </div>
+  <div class="form-group">
+   <label for="r2" class="col-sm-5 control-label">R2</label>
+   <div class="col-sm-7">
+    <input type="text" name="r2" class="form-control" id="r2"  #r2  [attr.placeholder]="opts.r2" (blur)="changeR2(r2.value)" [ngModel] ="opts.r2" >
+   </div>
+  </div>
+ </form>
+ <ul class="color_list">
+  <li *ngFor="let pieData of pieDatas; let i = index">
+   <span>pie{{i+1}}:</span>
+   <span class="pie_block" [style.background]="opts.colors[i]"></span>
+   <input type="text" [attr.name] ="'color'+i" class="form-control" (blur)="changeColor($event,i)" [ngModel] ="opts.colors[i]">
+  </li>
+ </ul>
+ <ul>
+  <li *ngFor="let pieData of pieDatas">
+   <span>{{pieData.name}}:</span>
+   <span>{{pieData.dataNum}}</span>
+  </li>
+ </ul>
+</div>

@@ -1,0 +1,5 @@
+.pie_block{ display: inline-block;height: 30px; width: 30px;}
+.color_list{ list-style: none;}
+.color_list li{height: 30px; line-height: 30px; font-size: 14px; margin-bottom: 10px; vertical-align: middle}
+.color_list span{ line-height: 30px; vertical-align: middle}
+.color_list input{ display: inline-block;float: none; width: 30%;}
