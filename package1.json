@@ -1,0 +1,44 @@
+{
+  "name": "angular2-quickstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.5",
+    //常用的那些由 Angular 开发组提供的服务、管道和指令。
+    "@angular/compiler": "2.0.0-rc.5", //Angular 的 模板编译器 。 它会理解模板，并且把模板转化成代码，以供应用程序运行和渲染。 开发人员通常不会直接跟这个编译器打交道，而是通过 platform-browser-dynamic 或离线模板编译器间接使用它。
+    "@angular/core": "2.0.0-rc.5", //    //框架中关键的运行期部件，每一个应用都需要它。 包括所有的元数据装饰器： Component 、 Directive ，依赖注入系统，以及组件生命周期钩子
+    "@angular/forms": "0.3.0",
+    "@angular/http": "2.0.0-rc.5",
+    "@angular/platform-browser": "2.0.0-rc.5",//与 DOM 和浏览器相关的每样东西，特别是帮助往 DOM 中渲染的那部分。 这个包还包含 bootstrapStatic 方法，用来引导那些在产品构建时需要离线预编译模板的应用程序
+    "@angular/platform-browser-dynamic": "2.0.0-rc.5", //为应用程序提供一些提供商和一个 bootstrap 方法，以便在客户端编译模板。不要用于离线编译。 我们使用这个包在开发期间引导应用，以及引导 plunker 中的范例
+    "@angular/router": "3.0.0-rc.1",
+    "@angular/router-deprecated": "2.0.0-rc.2",
+    "@angular/upgrade": "2.0.0-rc.5",
+    "angular2-in-memory-web-api": "0.0.15", //一个 Angular 的支持库，它能模拟一个远端服务器的 Web API ，而不需要依赖一个真实的服务器或发起真实的 HTTP 调用
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.4.0", //对全局上下文 (window) 做的猴子补丁 (monkey patch) ，提供了 ES2015(ES6) 的很多基础特性
+    "d3": "^3.5.17",
+    "reflect-metadata": "^0.1.3",// 一个由 Angular 和 TypeScript 编译器共享的依赖包
+    "rxjs": "5.0.0-beta.6", //一个为 可观察对象 (Observable) 规范 提供的填充库
+    "systemjs": "0.19.27", //动态的模块加载器，
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.2.0",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  }
+}
